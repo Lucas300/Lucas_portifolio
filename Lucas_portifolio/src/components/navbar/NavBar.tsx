@@ -4,13 +4,12 @@ function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-gray-800 p-4">
-      <div className="container mx-auto flex justify-between items-center">
-        <div className="text-white font-bold text-xl">Meu Portfólio</div>
+    <nav className="bg-blue-500 p-4">
+      <div className="container mx-auto flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0">
         <div className="hidden md:flex space-x-4">
-          <a href="#sobre" className="text-gray-300 hover:text-white">Sobre</a>
-          <a href="#skills" className="text-gray-300 hover:text-white">Skills</a>
-          <a href="#projetos" className="text-gray-300 hover:text-white">Projetos</a>
+          <a href="#sobre" className=" hover:text-white">Sobre</a>
+          <a href="#skills" className=" hover:text-white">Skills</a>
+          <a href="#projetos" className=" hover:text-white">Projetos</a>
         </div>
         <div className="md:hidden">
           <button onClick={() => setIsOpen(!isOpen)} className="text-gray-300 hover:text-white focus:outline-none">
@@ -25,7 +24,7 @@ function NavBar() {
         </div>
       </div>
       {isOpen && (
-        <div className="md:hidden mt-2">
+        <div className="md:hidden mt-2 text-center">
           <a href="#sobre" className="block text-gray-300 hover:text-white py-2">Sobre</a>
           <a href="#skills" className="block text-gray-300 hover:text-white py-2">Skills</a>
           <a href="#projetos" className="block text-gray-300 hover:text-white py-2">Projetos</a>
