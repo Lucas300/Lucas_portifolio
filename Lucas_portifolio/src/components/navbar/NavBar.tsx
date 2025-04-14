@@ -4,12 +4,12 @@ function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-blue-500 p-4">
+    <nav className="bg-[#3e42ff] p-4">
       <div className="container mx-auto flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0">
         <div className="hidden md:flex space-x-4">
-          <a href="#sobre" className=" hover:text-white">Sobre</a>
-          <a href="#skills" className=" hover:text-white">Skills</a>
-          <a href="#projetos" className=" hover:text-white">Projetos</a>
+          <a href="#sobre" className=" hover:text-white font-semibold">Sobre</a>
+          <a href="#skills" className=" hover:text-white font-semibold">Skills</a>
+          <a href="#projetos" className=" hover:text-white font-semibold">Projetos</a>
         </div>
         <div className="md:hidden">
           <button onClick={() => setIsOpen(!isOpen)} className="text-gray-300 hover:text-white focus:outline-none">
