@@ -8,7 +8,7 @@ function Home() {
         <>
             <div
                 className="bg-black bg-cover bg-center bg-no-repeat flex justify-center" style={{ backgroundImage: `url(${background})`}}>
-                <div className="container grid grid-cols-1 text-white mt-10 mb-40">
+                <div className="container grid grid-cols-1 text-white mt-10 mb-20">
                     <div className="flex flex-col gap-4 items-center justify-end py-4">
                         <h2 className="text-8xl font-bold bg-gradient-to-r from-blue-500 to-blue-300 text-transparent bg-clip-text">
                             Lucas Daniel

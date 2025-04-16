@@ -17,13 +17,13 @@ function Skills() {
                     📘 Linguagens
                 </h3>
                 <div className="flex flex-wrap gap-2">
-                    <img src="https://skillicons.dev/icons?i=html" className="w-10" alt="HTML" />
-                    <img src="https://skillicons.dev/icons?i=css" className="w-10" alt="CSS" />
-                    <img src="https://skillicons.dev/icons?i=js" className="w-10" alt="JavaScript" />
-                    <img src="https://skillicons.dev/icons?i=ts" className="w-10" alt="TypeScript" />
                     <img src="https://skillicons.dev/icons?i=java" className="w-10" alt="Java" />
                     <img src="https://skillicons.dev/icons?i=cs" className="w-10" alt="C#" />
                     <img src="https://skillicons.dev/icons?i=php" className="w-10" alt="PHP" />
+                    <img src="https://skillicons.dev/icons?i=ts" className="w-10" alt="TypeScript" />
+                    <img src="https://skillicons.dev/icons?i=html" className="w-10" alt="HTML" />
+                    <img src="https://skillicons.dev/icons?i=css" className="w-10" alt="CSS" />
+                    <img src="https://skillicons.dev/icons?i=js" className="w-10" alt="JavaScript" />
                 </div>
                 </div>
 
