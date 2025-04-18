@@ -12,8 +12,12 @@ import Popupteste from "./popupteste";
 function Projetosfullstack() {
     const [isOpen, setIsOpen] = useState<number | null>(null);
 
-    const toggleCollapse = (index: number) => {
-        setIsOpen(isOpen === index ? null : index);
+    const openPopup = (index: number) => {
+        setIsOpen(index);
+    };
+
+    const closePopup = () => {
+        setIsOpen(null);
     };
 
     return (
@@ -50,10 +54,10 @@ function Projetosfullstack() {
                         <a href="#card1">
                             <div className="text-center">
                                 <button
-                                    onClick={() => toggleCollapse(1)}
+                                    onClick={() => openPopup(1)}
                                     className="bg-blue-800 text-white px-4 py-2 rounded transition duration-300 hover:bg-blue-700 hover:scale-110"
                                 >
-                                    {isOpen === 1 ? "Fechar" : "Abrir"} Detalhes
+                                    Ver Detalhes
                                 </button>
                             </div>
                         </a>
@@ -84,10 +88,10 @@ function Projetosfullstack() {
                         <a href="#card2">
                             <div className="text-center">
                                 <button
-                                    onClick={() => toggleCollapse(2)}
+                                    onClick={() => openPopup(2)}
                                     className="bg-blue-800 text-white px-4 py-2 rounded transition duration-300 hover:bg-blue-700 hover:scale-110"
                                 >
-                                    {isOpen === 2 ? "Fechar" : "Abrir"} Detalhes
+                                    Ver Detalhes
                                 </button>
                             </div>
                         </a>
@@ -118,48 +122,99 @@ function Projetosfullstack() {
                         <a href="#card3">
                             <div className="text-center">
                                 <button
-                                    onClick={() => toggleCollapse(3)}
+                                    onClick={() => openPopup(3)}
                                     className="bg-blue-800 text-white px-4 py-2 rounded transition duration-300 hover:bg-blue-700 hover:scale-110"
                                 >
-                                    {isOpen === 3 ? "Fechar" : "Abrir"} Detalhes
+                                    Ver Detalhes
                                 </button>
                             </div>
                         </a>
                     </div>
+                    
+                    <div></div>
+                    {/* Botão final */}
+                    <div className="flex justify-center">
+                            <a
+                                        href="https://github.com/Lucas300"
+                                        target="_blank"
+                                        className="border  border-gray-500 bg-slate-800 px-4 py-2 rounded hover:bg-slate-950 transition"
+                                    >
+                                        <div className="flex items-center gap-2 border-spacing-1 ">
+                                            <GithubLogo size={20} weight="bold" className="" /> Meu GitHub
+                                        </div>
+                                    </a>
+                            </div>
                 </div>
 
-                {/* Detalhes do collapse praçaFit*/}
-
-                {/* Collapse 1 */}
-                {isOpen === 1 && (
-                    <div id="card1"
-                        className={`overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}
-                    >
-                        <div className="flex flex-col md:flex-row border border-gray-400 rounded p-4 gap-4 max-w-4xl mx-auto bg-slate-600">
-                            {/* VÍDEO */}
-                            <div className="flex-1">
-                                <iframe
-                                    className="w-full h-48 md:h-full rounded"
-                                    src="https://www.youtube.com/embed/hO_tjm9i32g?si=AY43KFBixHzep-OS"
-                                    title="YouTube Video"
-                                    frameBorder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    allowFullScreen
-                                ></iframe>
+                {/* Popup 1*/}
+                {isOpen && (
+                    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+                        <div className="bg-gray-800 text-white p-6 rounded-lg max-w-lg w-full">
+                            {/* botao de fechar */}
+                            <div className="flex mb-4 justify-end">
+                                <button
+                                    onClick={closePopup}
+                                    className="text-white   text-xl font-extrabold  bg-gray-800 hover:text-white"
+                                >
+                                    ✕
+                                </button>
                             </div>
-
-                            {/* DESCRIÇÃO */}
-                            <div className="flex-1 flex flex-col justify-between gap-4">
-                                <div>
-                                    <h2 className="text-xl font-bold">PraçaFit</h2>
-                                    <p className="text-white text-sm mt-2">
-                                        Texto do projeto 1, texto do projeto 1, texto do projeto 1, texto do projeto 1, texto do projeto 1.
-                                    </p>
+                            {isOpen === 1 &&
+                                <div className="flex-1">
+                                    <iframe
+                                        className="w-full my-5 h-64 md:h-[14em] rounded"
+                                        src="https://www.youtube.com/embed/hO_tjm9i32g?si=AY43KFBixHzep-OS"
+                                        title="YouTube Video"
+                                        frameBorder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowFullScreen
+                                    ></iframe>
                                 </div>
+                            }
+                            {isOpen === 2 &&
+                                <div className="flex-1">
+                                    <iframe
+                                        className="w-full my-5 h-64 md:h-[14em] rounded"
+                                        src="https://www.youtube.com/embed/hO_tjm9i32g?si=AY43KFBixHzep-OS"
+                                        title="YouTube Video"
+                                        frameBorder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowFullScreen
+                                    ></iframe>
+                                </div>
+                            }
+                            {isOpen === 3 &&
+                                <div className="flex-1">
+                                    <iframe
+                                        className="w-full my-5 h-64 md:h-[14em] rounded"
+                                        src="https://www.youtube.com/embed/hO_tjm9i32g?si=AY43KFBixHzep-OS"
+                                        title="YouTube Video"
+                                        frameBorder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowFullScreen
+                                    ></iframe>
+                                </div>
+                            }
 
-                                {/* BOTÕES */}
+                            <div className="flex justify-between items-center mb-4">
+                                <h2 className="text-xl font-bold">
+                                    {isOpen === 1 && "Detalhes do Projeto PraçaFit"}
+                                    {isOpen === 2 && "Detalhes do Projeto Blog Pessoal"}
+                                    {isOpen === 3 && "Detalhes do Projeto Farmácia"}
+                                </h2>
+                            </div>
+                            <div className="mb-4">
+                                <p>
+                                    {isOpen === 1 &&
+                                        "Descrição do projeto PraçaFit. Aqui você pode adicionar mais detalhes sobre o projeto."}
+                                    {isOpen === 2 &&
+                                        "Descrição do projeto Blog Pessoal. Aqui você pode adicionar mais detalhes sobre o projeto."}
+                                    {isOpen === 3 &&
+                                        "Descrição do projeto Farmácia. Aqui você pode adicionar mais detalhes sobre o projeto."}
+                                </p>
+                            </div>
+                            {isOpen === 1 &&
                                 <div className="flex flex-wrap gap-2">
-
                                     <a
                                         href="https://github.com/seu-usuario/repositorio-back"
                                         target="_blank"
@@ -189,41 +244,10 @@ function Projetosfullstack() {
 
                                     </a>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                )}
 
-                {/* Collapse 2 */}
-                {isOpen === 2 && (
-                    <div id="card2"
-                        className={`overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}
-                    >
-                        <div className="flex flex-col md:flex-row border border-gray-400 rounded p-4 gap-4 max-w-4xl mx-auto bg-slate-600">
-                            {/* VÍDEO */}
-                            <div className="flex-1">
-                                <iframe
-                                    className="w-full h-48 md:h-full rounded"
-                                    src="https://www.youtube.com/embed/SEU_VIDEO_ID"
-                                    title="YouTube Video"
-                                    frameBorder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    allowFullScreen
-                                ></iframe>
-                            </div>
-
-                            {/* DESCRIÇÃO */}
-                            <div className="flex-1 flex flex-col justify-between gap-4">
-                                <div>
-                                    <h2 className="text-xl font-bold">Blog Pessoal</h2>
-                                    <p className="text-white text-sm mt-2">
-                                        Texto do projeto 1, texto do projeto 1, texto do projeto 1, texto do projeto 1, texto do projeto 1.
-                                    </p>
-                                </div>
-
-                                {/* BOTÕES */}
+                            }
+                            {isOpen === 2 &&
                                 <div className="flex flex-wrap gap-2">
-
                                     <a
                                         href="https://github.com/seu-usuario/repositorio-back"
                                         target="_blank"
@@ -253,40 +277,9 @@ function Projetosfullstack() {
 
                                     </a>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                )}
-
-                {/* Collapse 3 */}
-                {isOpen === 3 && (
-                    <div id="card3" className={`overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}
-                    >
-                        <div className="flex flex-col md:flex-row border border-gray-400 rounded p-4 gap-4 max-w-4xl mx-auto bg-slate-600">
-                            {/* VÍDEO */}
-                            <div className="flex-1">
-                                <iframe
-                                    className="w-full h-48 md:h-full rounded"
-                                    src="https://www.youtube.com/embed/SEU_VIDEO_ID"
-                                    title="YouTube Video"
-                                    frameBorder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    allowFullScreen
-                                ></iframe>
-                            </div>
-
-                            {/* DESCRIÇÃO */}
-                            <div className="flex-1 flex flex-col justify-between gap-4">
-                                <div>
-                                    <h2 className="text-xl font-bold">Farmacia</h2>
-                                    <p className="text-white text-sm mt-2">
-                                        Texto do projeto 1, texto do projeto 1, texto do projeto 1, texto do projeto 1, texto do projeto 1.
-                                    </p>
-                                </div>
-
-                                {/* BOTÕES */}
+                            }
+                            {isOpen === 3 &&
                                 <div className="flex flex-wrap gap-2">
-
                                     <a
                                         href="https://github.com/seu-usuario/repositorio-back"
                                         target="_blank"
@@ -316,13 +309,11 @@ function Projetosfullstack() {
 
                                     </a>
                                 </div>
-                            </div>
+                            }
                         </div>
+                            
                     </div>
                 )}
-
-                {/* testar */}
-                <Popupteste />
             </div>
         </div>
     );
