@@ -1,11 +1,14 @@
-import React from "react";
 import background from "../../assets/images/fundos/background.png";
 
 function Skills() {
         return (
-        <div className="bg-gray-900 text-white py-10" style={{ backgroundImage: `url(${background})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
-            <div className="flex flex-col gap-4 items-center justify-end py-4">
-                <h2 className="text-5xl font-bold bg-gradient-to-r from-blue-500 to-blue-300 text-transparent bg-clip-text">
+        <div
+            id="skills"
+            className="bg-gray-900 text-white py-24  pt-28 md:pt-8"
+            style={{ backgroundImage: `url(${background})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+        >
+            <div className="flex flex-col gap-4 items-center justify-end py-4 lg:pt-10">
+                <h2 className="text-5xl mb-6 font-bold bg-gradient-to-r from-blue-500 to-blue-300 text-transparent bg-clip-text">
                         Minhas Skills
                 </h2>
             </div>

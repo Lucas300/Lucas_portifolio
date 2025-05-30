@@ -1,12 +1,11 @@
 import { GithubLogo, Play } from "@phosphor-icons/react";
 import background from "../../../assets/images/fundos/background.png";
-import fotoprojeto1 from "../../../assets/images/lucas/praca.png"
-import fotoprojeto2 from "../../../assets/images/projetos/blog.jpg";
-import fotoprojeto3 from "../../../assets/images/projetos/farmacia.png";
+import fotoprojeto1 from "../../../assets/images/praca.png"
+import fotoprojeto2 from "../../../assets/images/blog.png"
+import fotoprojeto3 from "../../../assets/images/farmacia.png";
 
 
 import { useState } from 'react';
-import Popupteste from "./popupteste";
 
 
 function Projetosfullstack() {
@@ -21,9 +20,14 @@ function Projetosfullstack() {
     };
 
     return (
-        <div className="bg-gray-900 text-white py-10 " style={{ backgroundImage: `url(${background})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        <div
+            id="projetos"
+            // pt-20: espaço maior no topo em telas pequenas; md:pt-14 reduz o espaço em telas médias e maiores
+            className="bg-gray-900 text-white py-14 pt-20 md:pt-14"
+            style={{ backgroundImage: `url(${background})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+        >
             <div className="flex flex-col gap-4 items-center justify-end py-4">
-                <h2 className="text-5xl font-bold bg-gradient-to-r from-blue-500 to-blue-300 text-transparent pb-5 bg-clip-text">
+                <h2 className="text-5xl mb-6 font-bold bg-gradient-to-r from-blue-500 to-blue-300 text-transparent pb-5 bg-clip-text">
                     Meus Projetos
                 </h2>
             </div>
@@ -36,26 +40,32 @@ function Projetosfullstack() {
                         </div>
                         <div className="flex justify-center">
                             <img
+                                onClick={() => openPopup(1)}
                                 src={fotoprojeto1}
                                 alt="Foto de Lucas Daniel"
-                                className="w-3/4 h-3/4 rounded-md mb-4 mx-auto transition duration-300 hover:scale-110"
+                                className="w-3/4 h-3/4 rounded-md mb-4 mx-auto transition duration-300 hover:scale-110 cursor-pointer"
                             />
+
                         </div>
-                        <div className="flex justify-center gap-4 mb-2">
+                        <div className="flex justify-center gap-2 mb-2">
                             <img src="https://skillicons.dev/icons?i=java" className="w-6 transition duration-300 hover:scale-125" alt="Java" />
                             <img src="https://skillicons.dev/icons?i=spring" className="w-6 transition duration-300 hover:scale-125" alt="Spring" />
+                            <img src="https://skillicons.dev/icons?i=docker" className="w-6 transition duration-300 hover:scale-125" alt="TypeScript" />
                             <img src="https://skillicons.dev/icons?i=react" className="w-6 transition duration-300 hover:scale-125" alt="React" />
                             <img src="https://skillicons.dev/icons?i=tailwind" className="w-6 transition duration-300 hover:scale-125" alt="TailwindCSS" />
                             <img src="https://skillicons.dev/icons?i=ts" className="w-6 transition duration-300 hover:scale-125" alt="TypeScript" />
                         </div>
                         <div className="text-center">
-                            <p className="text-lg text-gray-400 mb-4">Projeto Fitness</p>
+                            <p className="text-lg font-bold text-transparent bg-gradient-rainbow bg-clip-text bg-[length:400%_400%] animate-gradient-x">
+                                Full-Stack
+                            </p>
+
                         </div>
                         <a href="#card1">
                             <div className="text-center">
                                 <button
                                     onClick={() => openPopup(1)}
-                                    className="bg-blue-800 text-white px-4 py-2 rounded transition duration-300 hover:bg-blue-700 hover:scale-110"
+                                    className="bg-blue-800 cursor-pointer text-white px-4 py-2 rounded transition duration-300 hover:bg-blue-700 hover:scale-110"
                                 >
                                     Ver Detalhes
                                 </button>
@@ -70,26 +80,31 @@ function Projetosfullstack() {
                         </div>
                         <div className="flex justify-center">
                             <img
+                                onClick={() => openPopup(2)}
                                 src={fotoprojeto2}
                                 alt="Foto de Lucas Daniel"
-                                className="w-3/4 h-3/4 rounded-md mb-4 mx-auto transition duration-300 hover:scale-110"
+                                className="w-3/4 h-3/4 rounded-md mb-4 mx-auto transition duration-300 hover:scale-110 cursor-pointer"
                             />
+
                         </div>
-                        <div className="flex justify-center gap-4 mb-2">
+                        <div className="flex justify-center gap-2 mb-2">
                             <img src="https://skillicons.dev/icons?i=java" className="w-6 transition duration-300 hover:scale-125" alt="Java" />
                             <img src="https://skillicons.dev/icons?i=spring" className="w-6 transition duration-300 hover:scale-125" alt="Spring" />
+                            <img src="https://skillicons.dev/icons?i=docker" className="w-6 transition duration-300 hover:scale-125" alt="TypeScript" />
                             <img src="https://skillicons.dev/icons?i=react" className="w-6 transition duration-300 hover:scale-125" alt="React" />
                             <img src="https://skillicons.dev/icons?i=tailwind" className="w-6 transition duration-300 hover:scale-125" alt="TailwindCSS" />
                             <img src="https://skillicons.dev/icons?i=ts" className="w-6 transition duration-300 hover:scale-125" alt="TypeScript" />
                         </div>
                         <div className="text-center">
-                            <p className="text-lg text-gray-400 mb-4">Blog Pessoal</p>
+                            <p className="text-lg font-bold text-transparent bg-gradient-rainbow bg-clip-text bg-[length:400%_400%] animate-gradient-x">
+                                Full-Stack
+                            </p>
                         </div>
                         <a href="#card2">
                             <div className="text-center">
                                 <button
                                     onClick={() => openPopup(2)}
-                                    className="bg-blue-800 text-white px-4 py-2 rounded transition duration-300 hover:bg-blue-700 hover:scale-110"
+                                    className="bg-blue-800 cursor-pointer text-white px-4 py-2 rounded transition duration-300 hover:bg-blue-700 hover:scale-110"
                                 >
                                     Ver Detalhes
                                 </button>
@@ -104,46 +119,51 @@ function Projetosfullstack() {
                         </div>
                         <div className="flex justify-center">
                             <img
+                                onClick={() => openPopup(3)}
                                 src={fotoprojeto3}
                                 alt="Foto de Lucas Daniel"
-                                className="w-3/4 h-3/4 rounded-md mb-4 mx-auto transition duration-300 hover:scale-110"
+                                className="w-3/4 h-3/4 rounded-md mb-4 mx-auto transition duration-300 hover:scale-110 cursor-pointer"
                             />
+
                         </div>
-                        <div className="flex justify-center gap-4 mb-2">
+                        <div className="flex justify-center gap-2 mb-2">
                             <img src="https://skillicons.dev/icons?i=java" className="w-6 transition duration-300 hover:scale-125" alt="Java" />
                             <img src="https://skillicons.dev/icons?i=spring" className="w-6 transition duration-300 hover:scale-125" alt="Spring" />
+                            <img src="https://skillicons.dev/icons?i=docker" className="w-6 transition duration-300 hover:scale-125" alt="TypeScript" />
                             <img src="https://skillicons.dev/icons?i=react" className="w-6 transition duration-300 hover:scale-125" alt="React" />
                             <img src="https://skillicons.dev/icons?i=tailwind" className="w-6 transition duration-300 hover:scale-125" alt="TailwindCSS" />
                             <img src="https://skillicons.dev/icons?i=ts" className="w-6 transition duration-300 hover:scale-125" alt="TypeScript" />
                         </div>
                         <div className="text-center">
-                            <p className="text-lg text-gray-400 mb-4">Farmácia</p>
+                            <p className="text-lg font-bold text-transparent bg-gradient-rainbow bg-clip-text bg-[length:400%_400%] animate-gradient-x">
+                                Full-Stack
+                            </p>
                         </div>
                         <a href="#card3">
                             <div className="text-center">
                                 <button
                                     onClick={() => openPopup(3)}
-                                    className="bg-blue-800 text-white px-4 py-2 rounded transition duration-300 hover:bg-blue-700 hover:scale-110"
+                                    className="bg-blue-800 cursor-pointer text-white px-4 py-2 rounded transition duration-300 hover:bg-blue-700 hover:scale-110"
                                 >
                                     Ver Detalhes
                                 </button>
                             </div>
                         </a>
                     </div>
-                    
+
                     <div></div>
                     {/* Botão final */}
                     <div className="flex justify-center">
-                            <a
-                                        href="https://github.com/Lucas300"
-                                        target="_blank"
-                                        className="border  border-gray-500 bg-slate-800 px-4 py-2 rounded hover:bg-slate-950 transition"
-                                    >
-                                        <div className="flex items-center gap-2 border-spacing-1 ">
-                                            <GithubLogo size={20} weight="bold" className="" /> Meu GitHub
-                                        </div>
-                                    </a>
+                        <a
+                            href="https://github.com/Lucas300"
+                            target="_blank"
+                            className="border  border-gray-500 bg-slate-800 px-4 py-2 rounded hover:bg-slate-950 transition"
+                        >
+                            <div className="flex items-center gap-2 border-spacing-1 ">
+                                <GithubLogo size={20} weight="bold" className="" /> Mais projetos GitHub
                             </div>
+                        </a>
+                    </div>
                 </div>
 
                 {/* Popup 1*/}
@@ -163,7 +183,7 @@ function Projetosfullstack() {
                                 <div className="flex-1">
                                     <iframe
                                         className="w-full my-5 h-64 md:h-[14em] rounded"
-                                        src="https://www.youtube.com/embed/hO_tjm9i32g?si=AY43KFBixHzep-OS"
+                                        src="https://www.youtube.com/embed/_jSXWycWISE?si=A9EI2UY60DcV_YAm"
                                         title="YouTube Video"
                                         frameBorder="0"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -175,7 +195,7 @@ function Projetosfullstack() {
                                 <div className="flex-1">
                                     <iframe
                                         className="w-full my-5 h-64 md:h-[14em] rounded"
-                                        src="https://www.youtube.com/embed/hO_tjm9i32g?si=AY43KFBixHzep-OS"
+                                        src="https://www.youtube.com/embed/apF_VJ5VebI?si=Ay_ha-bnVBbIvGXQ"
                                         title="YouTube Video"
                                         frameBorder="0"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -187,7 +207,7 @@ function Projetosfullstack() {
                                 <div className="flex-1">
                                     <iframe
                                         className="w-full my-5 h-64 md:h-[14em] rounded"
-                                        src="https://www.youtube.com/embed/hO_tjm9i32g?si=AY43KFBixHzep-OS"
+                                        src="https://www.youtube.com/embed/14IriWSoVAk?si=hI0NLq0qk3CBWm_l"
                                         title="YouTube Video"
                                         frameBorder="0"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -196,50 +216,50 @@ function Projetosfullstack() {
                                 </div>
                             }
 
-                            <div className="flex justify-between items-center mb-4">
+                            <div className="flex justify-between  items-center mb-4">
                                 <h2 className="text-xl font-bold">
-                                    {isOpen === 1 && "Detalhes do Projeto PraçaFit"}
-                                    {isOpen === 2 && "Detalhes do Projeto Blog Pessoal"}
-                                    {isOpen === 3 && "Detalhes do Projeto Farmácia"}
+                                    {isOpen === 1 && "Projeto PraçaFit"}
+                                    {isOpen === 2 && "Projeto Blog Pessoal"}
+                                    {isOpen === 3 && "Projeto Farmácia"}
                                 </h2>
                             </div>
                             <div className="mb-4">
                                 <p>
                                     {isOpen === 1 &&
-                                        "Descrição do projeto PraçaFit. Aqui você pode adicionar mais detalhes sobre o projeto."}
+                                        "Esse é o Praça Fit, um projeto desenvolvido em grupo como parte do Projeto Integrador da Generation Brasil. A aplicação tem como objetivo orientar pessoas no uso correto dos aparelhos de academias ao ar livre, com sugestões de exercícios baseadas no cálculo do IMC."}
                                     {isOpen === 2 &&
-                                        "Descrição do projeto Blog Pessoal. Aqui você pode adicionar mais detalhes sobre o projeto."}
+                                        "Esse é o meu blog pessoal,nele compartilho minha evolução na área de TI, aprendizados e projetos que venho desenvolvendo como dev Full Stack."}
                                     {isOpen === 3 &&
-                                        "Descrição do projeto Farmácia. Aqui você pode adicionar mais detalhes sobre o projeto."}
+                                        "Esse é meu projeto de gerenciamento de produtos para uma farmácia, desenvolvido com Java, Spring Boot e PostgreSQL no back-end, e React com Descrição do projeto Farmácia."}
                                 </p>
                             </div>
                             {isOpen === 1 &&
                                 <div className="flex flex-wrap gap-2">
                                     <a
-                                        href="https://github.com/seu-usuario/repositorio-back"
+                                        href="https://github.com/Lucas300/Backend_fitness"
                                         target="_blank"
-                                        className="border border-gray-500 px-4 py-2 rounded hover:bg-slate-900 transition bg-slate-800"
+                                        className="border border-gray-500 px-2 py-2 text-sm md:px-4 md:py-2 md:text-base rounded hover:bg-slate-900 transition bg-slate-800"
                                     >
-                                        <div className="flex items-center gap-2 border-spacing-1 ">
-                                            <GithubLogo size={20} weight="bold" className="" /> Back-end
+                                        <div className="flex items-center gap-2 border-spacing-1">
+                                            <GithubLogo size={18} weight="bold" className="" /> Back-end
                                         </div>
                                     </a>
                                     <a
-                                        href="https://github.com/seu-usuario/repositorio-front"
+                                        href="https://github.com/Lucas300/Frontend_fitness"
                                         target="_blank"
-                                        className="border border-gray-500 bg-slate-950 px-4 py-2 rounded hover:bg-slate-800 transition"
+                                        className="border border-gray-500 bg-slate-950 px-2 py-2 text-sm md:px-4 md:py-2 md:text-base rounded hover:bg-slate-800 transition"
                                     >
-                                        <div className="flex items-center gap-2 border-spacing-1 ">
-                                            <GithubLogo size={20} weight="bold" className="" /> Front-end
+                                        <div className="flex items-center gap-2 border-spacing-1">
+                                            <GithubLogo size={18} weight="bold" className="" /> Front-end
                                         </div>
                                     </a>
                                     <a
-                                        href="https://link-do-projeto"
+                                        href="https://pracafit.netlify.app/"
                                         target="_blank"
-                                        className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition"
+                                        className="bg-green-600 text-white px-2 py-2 text-sm md:px-4 md:py-2 md:text-base rounded hover:bg-green-700 transition"
                                     >
-                                        <div className="flex items-center gap-2 border-spacing-1 ">
-                                            <Play size={20} weight="bold" className="" /> Testar
+                                        <div className="flex items-center gap-2 border-spacing-1">
+                                            <Play size={18} weight="bold" className="" /> Testar
                                         </div>
 
                                     </a>
@@ -249,30 +269,30 @@ function Projetosfullstack() {
                             {isOpen === 2 &&
                                 <div className="flex flex-wrap gap-2">
                                     <a
-                                        href="https://github.com/seu-usuario/repositorio-back"
+                                        href="https://github.com/Lucas300/blogpessoal_spring"
                                         target="_blank"
-                                        className="border border-gray-500 px-4 py-2 rounded hover:bg-slate-900 transition bg-slate-800"
+                                        className="border border-gray-500 px-2 py-2 text-sm md:px-4 md:py-2 md:text-base rounded hover:bg-slate-900 transition bg-slate-800"
                                     >
-                                        <div className="flex items-center gap-2 border-spacing-1 ">
-                                            <GithubLogo size={20} weight="bold" className="" /> Back-end
+                                        <div className="flex items-center gap-2 border-spacing-1">
+                                            <GithubLogo size={18} weight="bold" className="" /> Back-end
                                         </div>
                                     </a>
                                     <a
-                                        href="https://github.com/seu-usuario/repositorio-front"
+                                        href="https://github.com/Lucas300/BlogPessoal_React"
                                         target="_blank"
-                                        className="border border-gray-500 bg-slate-950 px-4 py-2 rounded hover:bg-slate-800 transition"
+                                        className="border border-gray-500 bg-slate-950 px-2 py-2 text-sm md:px-4 md:py-2 md:text-base rounded hover:bg-slate-800 transition"
                                     >
-                                        <div className="flex items-center gap-2 border-spacing-1 ">
-                                            <GithubLogo size={20} weight="bold" className="" /> Front-end
+                                        <div className="flex items-center gap-2 border-spacing-1">
+                                            <GithubLogo size={18} weight="bold" className="" /> Front-end
                                         </div>
                                     </a>
                                     <a
-                                        href="https://link-do-projeto"
+                                        href="https://portifolio-react-three-pi.vercel.app/"
                                         target="_blank"
-                                        className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition"
+                                        className="bg-green-600 text-white px-2 py-2 text-sm md:px-4 md:py-2 md:text-base rounded hover:bg-green-700 transition"
                                     >
-                                        <div className="flex items-center gap-2 border-spacing-1 ">
-                                            <Play size={20} weight="bold" className="" /> Testar
+                                        <div className="flex items-center gap-2 border-spacing-1">
+                                            <Play size={18} weight="bold" className="" /> Testar
                                         </div>
 
                                     </a>
@@ -281,37 +301,37 @@ function Projetosfullstack() {
                             {isOpen === 3 &&
                                 <div className="flex flex-wrap gap-2">
                                     <a
-                                        href="https://github.com/seu-usuario/repositorio-back"
+                                        href="https://github.com/Lucas300/Backend_Farmacia"
                                         target="_blank"
-                                        className="border border-gray-500 px-4 py-2 rounded hover:bg-slate-900 transition bg-slate-800"
+                                        className="border border-gray-500 px-2 py-2 text-sm md:px-4 md:py-2 md:text-base rounded hover:bg-slate-900 transition bg-slate-800"
                                     >
-                                        <div className="flex items-center gap-2 border-spacing-1 ">
-                                            <GithubLogo size={20} weight="bold" className="" /> Back-end
+                                        <div className="flex items-center gap-2 border-spacing-1">
+                                            <GithubLogo size={18} weight="bold" className="" /> Back-end
                                         </div>
                                     </a>
                                     <a
-                                        href="https://github.com/seu-usuario/repositorio-front"
+                                        href="https://github.com/Lucas300/React_farmacia"
                                         target="_blank"
-                                        className="border border-gray-500 bg-slate-950 px-4 py-2 rounded hover:bg-slate-800 transition"
+                                        className="border border-gray-500 bg-slate-950 px-2 py-2 text-sm md:px-4 md:py-2 md:text-base rounded hover:bg-slate-800 transition"
                                     >
-                                        <div className="flex items-center gap-2 border-spacing-1 ">
-                                            <GithubLogo size={20} weight="bold" className="" /> Front-end
+                                        <div className="flex items-center gap-2 border-spacing-1">
+                                            <GithubLogo size={18} weight="bold" className="" /> Front-end
                                         </div>
                                     </a>
                                     <a
-                                        href="https://link-do-projeto"
+                                        href="https://react-farmacia-blond.vercel.app/"
                                         target="_blank"
-                                        className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition"
+                                        className="bg-green-600 text-white px-2 py-2 text-sm md:px-4 md:py-2 md:text-base rounded hover:bg-green-700 transition"
                                     >
-                                        <div className="flex items-center gap-2 border-spacing-1 ">
-                                            <Play size={20} weight="bold" className="" /> Testar
+                                        <div className="flex items-center gap-2 border-spacing-1">
+                                            <Play size={18} weight="bold" className="" /> Testar
                                         </div>
 
                                     </a>
                                 </div>
                             }
                         </div>
-                            
+
                     </div>
                 )}
             </div>
