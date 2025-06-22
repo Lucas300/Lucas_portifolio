@@ -287,7 +287,7 @@ function Projetosfullstack() {
                                         </div>
                                     </a>
                                     <a
-                                        href="https://portifolio-react-three-pi.vercel.app/"
+                                        href="https://blog-pessoal-lucas-pi.vercel.app/"
                                         target="_blank"
                                         className="bg-green-600 text-white px-2 py-2 text-sm md:px-4 md:py-2 md:text-base rounded hover:bg-green-700 transition"
                                     >
@@ -319,7 +319,7 @@ function Projetosfullstack() {
                                         </div>
                                     </a>
                                     <a
-                                        href="https://react-farmacia-blond.vercel.app/"
+                                        href="https://lucas-drogaria-sao-paulo.vercel.app/"
                                         target="_blank"
                                         className="bg-green-600 text-white px-2 py-2 text-sm md:px-4 md:py-2 md:text-base rounded hover:bg-green-700 transition"
                                     >
