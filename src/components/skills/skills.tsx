@@ -1,12 +1,8 @@
-import background from "../../assets/images/fundos/background.png";
-
 function Skills() {
         return (
         <div
             id="skills"
-            className="bg-gray-900 text-white py-24  pt-28 md:pt-8"
-            style={{ backgroundImage: `url(${background})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
-        >
+            className=" text-white py-24  pt-28 md:pt-8">
             <div className="flex flex-col gap-4 items-center justify-end py-4 lg:pt-10">
                 <h2 className="text-5xl mb-6 font-bold bg-gradient-to-r from-blue-500 to-blue-300 text-transparent bg-clip-text">
                         Minhas Skills

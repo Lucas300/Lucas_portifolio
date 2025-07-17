@@ -1,6 +1,5 @@
 import { GithubLogo, InstagramLogo, LinkedinLogo } from "@phosphor-icons/react";
 import lucas from "../assets/images/lucas/lucassemfundo.png";
-import background from "../assets/images/fundos/background.png";
 
 
 
@@ -8,8 +7,7 @@ function Home() {
     return (
         <>
             <div id="inicio"
-                className="bg-black bg-cover bg-center bg-no-repeat flex justify-center pt-20 md:pt-8"
-                style={{ backgroundImage: `url(${background})`}}>
+                className=" bg-cover bg-center bg-no-repeat flex justify-center pt-20 md:pt-8">
                 <div className="container grid grid-cols-1 text-white mt-10 mb-20">
                     <div className="flex flex-col gap-4 items-center justify-end py-4 text-center">
                         <h2 className="font-bold bg-gradient-to-r from-blue-500 to-blue-300 text-transparent bg-clip-text text-4xl md:text-8xl">

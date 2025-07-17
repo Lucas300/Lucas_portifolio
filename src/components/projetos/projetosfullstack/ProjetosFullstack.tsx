@@ -1,5 +1,4 @@
 import { GithubLogo, Play } from "@phosphor-icons/react";
-import background from "../../../assets/images/fundos/background.png";
 import fotoprojeto1 from "../../../assets/images/praca.png"
 import fotoprojeto2 from "../../../assets/images/blog.png"
 import fotoprojeto3 from "../../../assets/images/farmacia.png";
@@ -23,9 +22,7 @@ function Projetosfullstack() {
         <div
             id="projetos"
             // pt-20: espaço maior no topo em telas pequenas; md:pt-14 reduz o espaço em telas médias e maiores
-            className="bg-gray-900 text-white py-14 pt-20 md:pt-14"
-            style={{ backgroundImage: `url(${background})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
-        >
+            className=" text-white py-14 pt-20 md:pt-14">
             <div className="flex flex-col gap-4 items-center justify-end py-4">
                 <h2 className="text-5xl mb-6 font-bold bg-gradient-to-r from-blue-500 to-blue-300 text-transparent pb-5 bg-clip-text">
                     Meus Projetos
