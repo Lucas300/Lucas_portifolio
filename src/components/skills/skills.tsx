@@ -9,7 +9,7 @@ function Skills() {
         >
             <div className="flex flex-col gap-4 items-center justify-end py-4 lg:pt-10">
                 <h2 className="text-5xl mb-6 font-bold bg-gradient-to-r from-blue-500 to-blue-300 text-transparent bg-clip-text">
-                        Minhas Skills
+                        Habilidades Técnicas
                 </h2>
             </div>
             <div className="bg-zinc-900 text-white p-8 rounded-xl max-w-4xl mx-auto">
@@ -21,7 +21,7 @@ function Skills() {
                 </h3>
                 <div className="flex flex-wrap gap-2">
                     <img src="https://skillicons.dev/icons?i=java" className="w-10" alt="Java" />
-                    <img src="https://skillicons.dev/icons?i=cs" className="w-10" alt="C#" />
+                    <img src="https://skillicons.dev/icons?i=py" className="w-10" alt="Python" />
                     <img src="https://skillicons.dev/icons?i=php" className="w-10" alt="PHP" />
                     <img src="https://skillicons.dev/icons?i=ts" className="w-10" alt="TypeScript" />
                     <img src="https://skillicons.dev/icons?i=html" className="w-10" alt="HTML" />
@@ -49,10 +49,14 @@ function Skills() {
                     🛠️ Ferramentas
                 </h3>
                 <div className="flex flex-wrap gap-2">
+                    <img src="https://skillicons.dev/icons?i=docker" className="w-10" alt="Docker" />
                     <img src="https://skillicons.dev/icons?i=vscode" className="w-10" alt="VSCode" />
                     <img src="https://skillicons.dev/icons?i=eclipse" className="w-10" alt="Eclipse" />
                     <img src="https://skillicons.dev/icons?i=idea" className="w-10" alt="IntelliJ" />
                     <img src="https://skillicons.dev/icons?i=vite" className="w-10" alt="Vite" />
+                    <img src="https://skillicons.dev/icons?i=rabbitmq" className="w-10" alt="rabbitmq" />
+                    <img src="https://skillicons.dev/icons?i=maven" className="w-10" alt="maven" />
+                    <img src="https://skillicons.dev/icons?i=postman" className="w-10" alt="Postman" />
                 </div>
                 </div>
 

@@ -1,4 +1,5 @@
 import background from "../../assets/images/fundos/fundo1.png";
+import gen from "../../assets/images/gen.jpg";
 
 function Sobre() {
     return (
@@ -15,7 +16,19 @@ function Sobre() {
                             Sobre Mim
                         </h2>
                         <p className="text-base md:text-xl mt-4 text-center md:text-justify">
-                            Sou um desenvolvedor Full Stack em formação, com sólida base em Java, Spring Boot, React, MySQL e tecnologias web. Tenho experiência como instrutor de informática, atuando com manutenção de computadores, suporte técnico e ensino de ferramentas como Microsoft Office e sistemas operacionais. Essa vivência fortaleceu minhas habilidades em comunicação, lógica de programação e resolução de problemas.
+                            Sou um desenvolvedor Full Stack em formação, com experiência prática em Java, Spring Boot, React, MySQL e outras tecnologias web. Minha trajetória inclui atuação como instrutor de informática, onde desenvolvi habilidades em comunicação, suporte técnico e ensino de ferramentas como Microsoft Office e sistemas operacionais. Essa vivência me ajudou a aprimorar a lógica de programação, a resolução de problemas e o trabalho em equipe.
+                        </p>
+                        <p>
+                            <img
+                                src={gen}
+                                className="  rounded-lg  mt-4"
+                                alt="Imagem da turma java 79 da generation"
+                                loading="lazy"
+                            />
+                        </p>
+                        <h3 className="text-base text-center md:text-justify">Bootcamp Fullstack Java – Generation Brasil</h3>
+                        <p className="text-base md:text-xl mt-2 text-center md:text-justify">
+                            Durante o Bootcamp, desenvolvi projetos completos utilizando Spring Boot, bancos de dados PostgreSQL/MySQL e aplicações web com React, trabalhando em equipe e aplicando metodologias ágeis para entregar soluções funcionais.
                         </p>
                     </div>
                 </div>

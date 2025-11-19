@@ -9,7 +9,7 @@ function NavBar() {
         <div className="hidden md:flex space-x-4">
           <a href="#inicio" className=" hover:text-slate-500 text-white font-semibold">Início</a>
           <a href="#sobre" className=" hover:text-slate-500 text-white font-semibold">Sobre</a>
-          <a href="#skills" className=" hover:text-slate-500 text-white font-semibold">Skills</a>
+          <a href="#skills" className=" hover:text-slate-500 text-white font-semibold">Habilidades</a>
           <a href="#projetos" className=" hover:text-slate-500 text-white font-semibold">Projetos</a>
         </div>
         <div className="md:hidden">
